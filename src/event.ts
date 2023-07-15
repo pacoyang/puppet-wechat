@@ -132,7 +132,9 @@ async function onLogin (
   // }
 
   if (this.logonoff()) {
-    throw new Error('onLogin() user had already logined: ' + this.selfId())
+    log.verbose('onLogin() user had already logined: ' + this.selfId())
+    return
+    // throw new Error('onLogin() user had already logined: ' + this.selfId())
     // await this.logout()
   }
 
