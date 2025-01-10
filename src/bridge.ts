@@ -242,6 +242,9 @@ export class Bridge extends EventEmitter {
     const url = this.entryUrl(cookieList)
     log.verbose('PuppetWeChatBridge', 'initPage() before page.goto(url)')
 
+    // set timeout 60000 ms，30000ms always timeout
+    page.setDefaultTimeout(60000)
+
     // Does this related to(?) the CI Error: exception: Navigation Timeout Exceeded: 30000ms exceeded
     await page.goto(url)
     log.verbose('PuppetWeChatBridge', 'initPage() after page.goto(url)')

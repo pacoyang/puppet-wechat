@@ -6,7 +6,6 @@
       "dom",
       "esnext",
     ],
-    "useUnknownInCatchVariables": false,
    },
   "exclude": [
     "node_modules/",
